@@ -8,18 +8,16 @@
 		<mdl_version>6.0.0</mdl_version>
 		<mdl_prefix>minio</mdl_prefix>
 		<mdl_url><![CDATA[{
-	"maven": {
-		"checkstyle": true,
-		"repositoryUrl": "https://platform.simplicite.io/6.3/maven"
-	},
-	"origin": {
-		"uri": "https://github.com/simplicitesoftware/module-minio.git"
-	},
-	"sonar": {
-		"organization": "simplicitesoftware",
-		"host.url": "https://sonarcloud.io"
-	},
-	"type": "git"
+    "maven": {
+        "checkstyle": true,
+        "repositoryUrl": "https://platform.simplicite.io/6.3/maven"
+    },
+    "origin": {"uri": "https://github.com/simplicitesoftware/module-minio.git"},
+    "sonar": {
+        "organization": "simplicitesoftware",
+        "host.url": "https://sonarcloud.io"
+    },
+    "type": "git"
 }]]></mdl_url>
 		<mdl_type/>
 		<mdl_comment><![CDATA[Minio S3 clouyd storage example
@@ -65,7 +63,13 @@ Description:
 mc mb local/test
 ```
 
-4. Review the `MINIO_CONFIG` system param to comply with the above Minio server configuration]]></mdl_comment>
+4. Review the `MINIO_CONFIG` system param to comply with your Minio server configuration
+
+The default value of the system parameter is using the follwoing environment variables:
+
+- `MINIO_ENDPOINT`: API endpoint (e.g. `http://127.0.0.1:9000`)
+- `MINIO_BUCKET`: bucket name (e.g. `test`)
+- `MINIO_ACCESSKEY`and `MINIO_SECRETKEY`: credentials]]></mdl_comment>
 	</data>
 </object>
 <object>

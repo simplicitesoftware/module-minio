@@ -54,7 +54,13 @@ Description:
 mc mb local/test
 ```
 
-4. Review the `MINIO_CONFIG` system param to comply with the above Minio server configuration
+4. Review the `MINIO_CONFIG` system param to comply with your Minio server configuration
+
+The default value of the system parameter is using the follwoing environment variables:
+
+- `MINIO_ENDPOINT`: API endpoint (e.g. `http://127.0.0.1:9000`)
+- `MINIO_BUCKET`: bucket name (e.g. `test`)
+- `MINIO_ACCESSKEY`and `MINIO_SECRETKEY`: credentials
 
 `MinioTest` business object definition
 --------------------------------------
