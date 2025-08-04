@@ -562,7 +562,7 @@ The default value of the system parameter is using the follwoing environment var
 			</object>
 		</tsl_object>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Tst code</tsl_value>
+		<tsl_value>Code</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>
@@ -600,7 +600,7 @@ The default value of the system parameter is using the follwoing environment var
 			</object>
 		</tsl_object>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Tst label</tsl_value>
+		<tsl_value>Label</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>
@@ -619,7 +619,7 @@ The default value of the system parameter is using the follwoing environment var
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Label</tsl_value>
+		<tsl_value>Libellé</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>
@@ -638,7 +638,7 @@ The default value of the system parameter is using the follwoing environment var
 			</object>
 		</tsl_object>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Tst document</tsl_value>
+		<tsl_value>Document</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>

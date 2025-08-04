@@ -29,15 +29,15 @@ components:
       type: object
       properties:
         minioTstLabel:
-          description: Tst label
+          description: Label
           type: string
           maxLength: 255
         minioTstCode:
-          description: Tst code
+          description: Code
           type: string
           maxLength: 50
         minioTstDocument:
-          description: Tst document
+          description: Document
           type: object
         row_id:
           description: Unique technical row ID
@@ -257,19 +257,19 @@ paths:
           type: string
         in: query
         name: minioTstCode
-        description: Search filter for Tst code
+        description: Search filter for Code
         required: false
       - schema:
           type: string
         in: query
         name: minioTstLabel
-        description: Search filter for Tst label
+        description: Search filter for Label
         required: false
       - schema:
           type: string
         in: query
         name: minioTstDocument
-        description: Search filter for Tst document
+        description: Search filter for Document
         required: false
       tags:
       - MinioTest

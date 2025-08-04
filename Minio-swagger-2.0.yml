@@ -90,17 +90,17 @@ paths:
         required: false
       - in: query
         name: minioTstCode
-        description: Search filter for Tst code
+        description: Search filter for Code
         type: string
         required: false
       - in: query
         name: minioTstLabel
-        description: Search filter for Tst label
+        description: Search filter for Label
         type: string
         required: false
       - in: query
         name: minioTstDocument
-        description: Search filter for Tst document
+        description: Search filter for Document
         type: string
         required: false
       tags:
@@ -322,15 +322,15 @@ definitions:
     type: object
     properties:
       minioTstLabel:
-        description: Tst label
+        description: Label
         type: string
         maxLength: 255
       minioTstCode:
-        description: Tst code
+        description: Code
         type: string
         maxLength: 50
       minioTstDocument:
-        description: Tst document
+        description: Document
         type: object
       row_id:
         description: Unique technical row ID
