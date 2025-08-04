@@ -74,8 +74,7 @@ services:
     ports:
       - 127.0.0.1:9000:9000
     volumes:
-      - <volume spec>:/data
-(...)
+      - <your host volume spec>:/data
 ```
 
 Create the credentials and the bucket locally using the `mc` CLI
