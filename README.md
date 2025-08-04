@@ -11,8 +11,8 @@
 `Minio` module definition
 =========================
 
-Minio S3 clouyd storage example
--------------------------------
+Minio S3 cloud storage example
+------------------------------
 
 ### Prerequisites
 
@@ -60,7 +60,35 @@ The default value of the system parameter is using the follwoing environment var
 
 - `MINIO_ENDPOINT`: API endpoint (e.g. `http://127.0.0.1:9000`)
 - `MINIO_BUCKET`: bucket name (e.g. `test`)
-- `MINIO_ACCESSKEY`and `MINIO_SECRETKEY`: credentials
+- `MINIO_ACCESSKEY` and `MINIO_SECRETKEY`: credentials
+
+### Docker
+
+Add the `minio` service to you `docker-compose.yml`:
+
+```yaml
+services:
+  minio:
+    image: quay.io/minio/minio:latest
+    command: [ "server" ]
+    ports:
+      - 127.0.0.1:9000:9000
+    volumes:
+      - <volume spec>:/data
+(...)
+```
+
+Create the credentials and the bucket locally using the `mc` CLI
+(once done you can remove the `9000` port mapping)
+and add the following environment variabled to your `simplicite` service:
+
+```yaml
+    environment:
+      MINIO_ENDPOINT: "http://minio:9000"
+      MINIO_BUCKET: "<your bucket name, e.g. test>"
+      MINIO_ACCESSKEY: "<your access key>"
+      MINIO_SECRETKEY: "<your secret key>"
+```
 
 `MinioTest` business object definition
 --------------------------------------
