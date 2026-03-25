@@ -13,7 +13,6 @@ import com.simplicite.util.tools.CloudStorageTool;
 
 public class PlatformHooksMinio extends com.simplicite.util.engine.PlatformHooksInterface {
     private File getStorageFile(String path) {
-        AppLog.info("[MINIO] path = " + path, null);
         return path.startsWith("MinioTest") ? new File(path.replace("/", "~")) : null;
     }
 
@@ -25,10 +24,12 @@ public class PlatformHooksMinio extends com.simplicite.util.engine.PlatformHooks
     public InputStream readDocument(String path) throws Exception {
         File f = getStorageFile(path);
         if (f == null)
-            return null;
+            return super.readDocument(path);
 
         try (CloudStorageTool cst = getStorageTool()) {
-            JSONObject sf = cst.get(f.getName(), true);
+            String n = f.getName();
+            AppLog.info("[MINIO] reading " + n + " from S3", null);
+            JSONObject sf = cst.get(n, true);
             return new ByteArrayInputStream((byte[])sf.get("content"));
         } catch (Exception e) {
             AppLog.error(null, e, null);
@@ -40,10 +41,12 @@ public class PlatformHooksMinio extends com.simplicite.util.engine.PlatformHooks
     public boolean writeDocument(String path, Object data) throws Exception {
         File f = getStorageFile(path);
         if (f == null)
-            return false;
+            return super.writeDocument(path, data);
 
         try (CloudStorageTool cst = getStorageTool()) {
-            cst.put(new JSONObject().put("name", f.getName()).put("mime", Files.probeContentType(f.toPath())).put("content", data));
+            String n = f.getName();
+            AppLog.info("[MINIO] writing " + n + " to S3", null);
+            cst.put(new JSONObject().put("name", n).put("mime", Files.probeContentType(f.toPath())).put("content", data));
             return true;
         } catch (Exception e) {
             AppLog.error(null, e, null);
@@ -55,10 +58,12 @@ public class PlatformHooksMinio extends com.simplicite.util.engine.PlatformHooks
     public boolean deleteDocument(String path) throws Exception {
         File f = getStorageFile(path);
         if (f == null)
-            return false;
+            return super.deleteDocument(path);
 
         try (CloudStorageTool cst = getStorageTool()) {
-            cst.delete(f.getName());
+            String n = f.getName();
+            AppLog.info("[MINIO] deleting " + n + " from S3", null);
+            cst.delete(n);
             return true;
         } catch (Exception e) {
             AppLog.error(null, e, null);
@@ -67,3 +72,4 @@ public class PlatformHooksMinio extends com.simplicite.util.engine.PlatformHooks
     }
 
 }
+
