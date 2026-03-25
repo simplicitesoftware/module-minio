@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: Minio 6.0.0
+#             |_| Module: Minio 6.0.1
 basePath: /api
 paths:
   /login:
@@ -450,7 +450,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module Minio
   title: Minio
-  version: 6.0.0
+  version: 6.0.1
 tags:
 - name: MinioTest
   description: Minio test object

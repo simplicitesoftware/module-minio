@@ -4,6 +4,6 @@
     "format": "xml",
     "files": ["Minio.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-minio.git"}},
-    "version": "6.0.0",
+    "version": "6.0.1",
     "platform": "6.3.0-alpha"
 }

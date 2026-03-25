@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>Minio</mdl_name>
-		<mdl_version>6.0.0</mdl_version>
+		<mdl_version>6.0.1</mdl_version>
 		<mdl_prefix>minio</mdl_prefix>
 		<mdl_url><![CDATA[{
     "maven": {
