@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: Minio 6.0.1
+#             |_| Module: Minio 6.0.2
 components:
   schemas:
     Error404:
@@ -39,10 +39,16 @@ components:
         minioTstDocument:
           description: Document
           type: object
+        minioTstMultipleDocument:
+          description: Multiple document
+          type: object
         row_id:
           description: Unique technical row ID
           type: string
           maxLength: 11
+        minioTstImage:
+          description: Image
+          type: object
     TreeviewData:
       type: object
       properties:
@@ -270,6 +276,18 @@ paths:
         in: query
         name: minioTstDocument
         description: Search filter for Document
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: minioTstMultipleDocument
+        description: Search filter for Multiple document
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: minioTstImage
+        description: Search filter for Image
         required: false
       tags:
       - MinioTest
@@ -504,7 +522,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module Minio
   title: Minio
-  version: 6.0.1
+  version: 6.0.2
 tags:
 - name: MinioTest
   description: Minio test object
