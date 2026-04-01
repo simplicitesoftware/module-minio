@@ -894,7 +894,7 @@ and add the following environment variabled to your `simplicite` service:
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Tst image</tsl_value>
+		<tsl_value>Image</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>
@@ -932,7 +932,7 @@ and add the following environment variabled to your `simplicite` service:
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Tst multiple document</tsl_value>
+		<tsl_value>Document multiple</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>
@@ -955,7 +955,7 @@ and add the following environment variabled to your `simplicite` service:
 			</object>
 		</tsl_object>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Test -1</tsl_value>
+		<tsl_value>Minio test</tsl_value>
 		<tsl_plural_value/>
 		<row_module_id.mdl_name>Minio</row_module_id.mdl_name>
 	</data>
@@ -969,7 +969,7 @@ and add the following environment variabled to your `simplicite` service:
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Test</tsl_value>
+		<tsl_value>Test Minio</tsl_value>
 		<tsl_plural_value/>
 		<row_module_id.mdl_name>Minio</row_module_id.mdl_name>
 	</data>
